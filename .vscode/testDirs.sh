@@ -21,7 +21,7 @@ fi
 
 printf "$format" "--workspaceFolder" "$flag" "$2" 
 
-addonsFolder="$1/../../addons"
+addonsFolder="$1/../../../addons"
 
 if [ -d $addonsFolder ] 
 then
@@ -32,7 +32,7 @@ fi
 
 printf "$format" "--addons" "$flag" "$addonsFolder" 
 
-ofFolder="$1/../../libs/openFrameworks"
+ofFolder="$1/../../../libs/openFrameworks"
 
 if [ -d $ofFolder ] 
 then
