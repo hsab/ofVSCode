@@ -3,6 +3,8 @@
 
 /bin
 /obj
+/.vscode/browse.db
+/.vscode/browse.db*
 
 # Xcode Project
 xcuserdata/
