@@ -15,7 +15,7 @@ Using the provided alias it is also possible to initiate a fresh openframeworks 
 It relies on the use of of **aliases** and command chaining in terminal to circumvent `git clone <repo> .`'s restrictions in a non empty directory.
   
 
-# Example Alias:
+# Example Usage:
 
 After adding the alias to your shell config (in my case zsh) you can run `ofxvsc` in your current existing project.
 
