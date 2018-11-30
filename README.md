@@ -47,6 +47,7 @@ This structure is my personal preference, because addon examples can easily be c
   
 
 # Features
+- Automatic path checking to ensure correct folder structure by running the `Check Paths` task.
 - Auto code completion (Requires [Microsoft C++ extension](https://code.visualstudio.com/docs/languages/cpp)).
 - Step by step debugging (requires [gdb](https://www.gnu.org/software/gdb/) or similar debugger).
 - Browse source code under `/libs/openFrameworks` and `/addons/*` folders.
