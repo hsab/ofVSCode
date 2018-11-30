@@ -1,7 +1,7 @@
 
 ![Screenshot](https://raw.githubusercontent.com/hsab/vscode_oF/master/.readme/image.png)
 
-# ofxVSCode
+# ofVSCode
 
 Quick [openFrameworks](https://openframeworks.cc/) workspace initializer for [Visual Studio Code](https://code.visualstudio.com/).
 
