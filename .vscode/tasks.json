@@ -1,0 +1,112 @@
+{
+    "version": "2.0.0",
+    "shell": {
+        "task": true
+    },
+    "tasks": [{
+            "type": "shell",
+            "label": "Build Debug",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "command": "bash",
+            "args": [
+                "-c",
+                "time ( rm -f ./bin/$(basename '$PWD')_debug && make Debug -j$(nproc) )"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Build Release",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "command": "bash",
+            "args": [
+                "-c",
+                "time ( rm -f ./bin/$(basename '$PWD') && make Release -j$(nproc) )"
+            ],
+        },
+        {
+            "type": "shell",
+            "label": "Clean Debug",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "command": "make",
+            "args": [
+                "CleanDebug"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Clean Release",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "command": "make",
+            "args": [
+                "CleanRelease"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Run Debug",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "command": "make",
+            "args": [
+                "RunDebug"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Run Release",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            },
+            "command": "make",
+            "args": [
+                "RunRelease"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Clean All",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Check Paths",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "command": "sh ${workspaceRoot}/.vscode/testDirs.sh ${workspaceRoot} ${workspaceFolder}"
+        }
+    ]
+}
