@@ -22,7 +22,12 @@ After adding the alias to your shell config (in my case zsh) you can run `ofxvsc
 This is particularly useful for quickly initiating addon examples for testing, without the need to go through the projectGenerator.
 
 ```
-alias ofxvsc="git clone https://github.com/hsab/ofVSCode.git && mv ./ofVSCode/.vscode/ ./ && mv ./ofVSCode/.gitignore ./ && mv -n ./ofVSCode/addons.make ./ && mv -n ./ofVSCode/config.make ./ && mv -n ./ofVSCode/Makefile ./ && mv -n ./ofVSCode/src/ ./ &&  rm -rf ./ofVSCode"
+alias ofcode="git clone https://github.com/hsab/ofVSCode.git && mv ./ofVSCode/.vscode/ ./ && mv ./ofVSCode/.gitignore ./ && mv -n ./ofVSCode/addons.make ./ && mv -n ./ofVSCode/config.make ./ && mv -n ./ofVSCode/Makefile ./ && mv -n ./ofVSCode/src/ ./ &&  rm -rf ./ofVSCode"
+```
+
+If you'd like to immediately open the project in VSCode after initiation use the following alias instead:
+```
+alias ofcode="git clone https://github.com/hsab/ofVSCode.git && mv ./ofVSCode/.vscode/ ./ && mv ./ofVSCode/.gitignore ./ && mv -n ./ofVSCode/addons.make ./ && mv -n ./ofVSCode/config.make ./ && mv -n ./ofVSCode/Makefile ./ && mv -n ./ofVSCode/src/ ./ &&  rm -rf ./ofVSCode && code ./ &"
 ```
 
 
