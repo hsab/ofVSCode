@@ -1,5 +1,5 @@
 
-![Screenshot](https://raw.githubusercontent.com/hsab/vscode_oF/master/.readme/image.png)
+![Screenshot](.readme/image.png)
 
 # ofVSCode
 
