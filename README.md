@@ -10,6 +10,7 @@ Fork of [vscode_oF](https://github.com/hiroMTB/vscode_oF) by [@hiroMTB](https://
 This is not an addon, although the name suggests it is.
 
 This project is intended to quickly initiate a vscode workspace in an existing or empty project or an addon example.
+Using the provided alias it is also possible to initiate a fresh openframeworks project.
 
 It relies on the use of of **aliases** and command chaining in terminal to circumvent `git clone <repo> .`'s restrictions in a non empty directory.
   
@@ -21,28 +22,28 @@ After adding the alias to your shell config (in my case zsh) you can run `ofxvsc
 This is particularly useful for quickly initiating addon examples for testing, without the need to go through the projectGenerator.
 
 ```
-alias ofxvsc="git clone https://github.com/hsab/ofxVSCode.git && mv ./ofxVSCode/.vscode/ ./ && mv ./ofxVSCode/.gitignore ./ && rm -rf ./ofxVSCode"
+alias ofxvsc="git clone https://github.com/hsab/ofxVSCode.git && mv ./ofxVSCode/.vscode/ ./ && mv ./ofxVSCode/.gitignore ./ && mv -n ./ofxVSCode/addons.make ./ && mv -n ./ofxVSCode/config.make ./ && mv -n ./ofxVSCode/Makefile ./ && mv -n ./ofxVSCode/src/ ./ &&  rm -rf ./ofxVSCode"
 ```
+
 
 Running the following will:
 1. Clone the `ofxVSCode` repo in current project.
 2. Move `.vscode` workspace folder and `.gitignore` from `ofxVSCode` to the current project directory.
-3. Remove `ofxVSCode` folder entirely.
+3. Move `Makefile`, `addons.make`, and `config.make ` if they don't already exist.
+4. Move the `emptyExample` source folder if it does not already exist.
+5. Remove `ofxVSCode` folder entirely.
 
 
-  
 
-**Note:** By default the include and libraries are linked such that the project is in the same directory as myApps:
+**Note:** By default the include and libraries are linked such that the project is in thedirectory as `myApps`:
+- Correct: `openframeworks/apps/myApps/yourProject/`
 
-- Correct: `openframeworks/apps/yourProject`
-- Incorrect: `openframeworks/apps/myApps/yourProject`
-
-This structure is my personal preference. You can fork the repo and change every instance of `${workspaceRoot}/../../` to `${workspaceRoot}/../../../` in the `c_cpp_properties.json` file.
+This structure is my personal preference. You can fork the repository and appropriately change every instance of `${workspaceRoot}/../../../` in the `c_cpp_properties.json` file.
 
   
 
 # Addons How-to:
-1. Edit addons.make file if you want to add addons/
+1. Edit addons.make file if you want to add addons.
 2. You might need to edit the `c_cpp_properties.json` file.
   
   
@@ -59,7 +60,8 @@ This structure is my personal preference. You can fork the repo and change every
 ```
 /of
   /apps
-    /exampleProject <--
+    /myApps
+      /exampleProject <--
 ```
 
 ## oF version
