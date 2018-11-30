@@ -34,7 +34,6 @@ Running the following will:
 5. Remove `ofxVSCode` folder entirely.
 
 
-
 **Note:** By default the include and libraries are linked such that the project is in thedirectory as `myApps`:
 - Correct: `openframeworks/apps/myApps/yourProject/`
 
