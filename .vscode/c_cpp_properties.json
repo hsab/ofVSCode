@@ -67,10 +67,21 @@
                 "/usr/lib/x86_64-linux-gnu/glib-2.0/include",
                 "/usr/lib/glib-2.0/include",
                 "/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include",
-                "/usr/local/include",
                 "/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed",
                 "/usr/include/x86_64-linux-gnu",
-                "${workspaceRoot}/../../../libs/openFrameworks",
+                "/usr/include/x86_64-linux-gnu/c++/5",
+                "/usr/include/pulse",
+                "/usr/include/cairo",
+                "/usr/include/gstreamer-1.0",
+                "/usr/include/glib-2.0",
+                "${workspaceRoot}/",
+                "${workspaceRoot}/**",
+                "${workspaceRoot}/../../../libs/",
+                "${workspaceRoot}/../../../libs/**",
+                "${workspaceRoot}/../../../addons/",
+                "${workspaceRoot}/../../../addons/**",
+                "${workspaceRoot}/../../../libs/openFrameworks/",
+                "${workspaceRoot}/../../../libs/openFrameworks/**",
                 "${workspaceRoot}/../../../libs/openFrameworks/3d",
                 "${workspaceRoot}/../../../libs/openFrameworks/app",
                 "${workspaceRoot}/../../../libs/openFrameworks/communication",
@@ -98,17 +109,7 @@
                 "${workspaceRoot}/../../../libs/uriparser/include",
                 "${workspaceRoot}/../../../libs/utf8/include",
                 "${workspaceRoot}/../../../libs/poco/include",
-                "${workspaceRoot}/../../../libs/kiss/include",
-                "/usr/include/x86_64-linux-gnu/c++/5",
-                "/usr/include/pulse",
-                "/usr/include/cairo",
-                "/usr/include/gstreamer-1.0",
-                "/usr/include/glib-2.0",
-                "${workspaceRoot}",
-                "${workspaceRoot}/utils",
-                "${workspaceRoot}/3d",
-                "${workspaceRoot}/math",
-                "${workspaceRoot}/types"
+                "${workspaceRoot}/../../../libs/kiss/include"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
@@ -116,12 +117,20 @@
                 "path": [
                     "/usr/include",
                     "/usr/local/include",
-                    "${workspaceRoot}/../../../libs",
-                    "${workspaceRoot}/../../../addons",
-                    "${workspaceRoot}/../../../libs/openFrameworks"
+                    "${workspaceRoot}/",
+                    "${workspaceRoot}/**",
+                    "${workspaceRoot}/../../../libs/",
+                    "${workspaceRoot}/../../../libs/**",
+                    "${workspaceRoot}/../../../addons/",
+                    "${workspaceRoot}/../../../addons/**",
+                    "${workspaceRoot}/../../../libs/openFrameworks/",
+                    "${workspaceRoot}/../../../libs/openFrameworks/**"
                 ]
             },
-            "intelliSenseMode": "${default}"
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         },
         {
             "name": "Win32",
