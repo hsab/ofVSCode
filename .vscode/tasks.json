@@ -13,7 +13,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "time ( rm -f ./bin/$(basename '$PWD')_debug && make Debug -j$(nproc) )"
+                "time ( rm -f ./bin/$(basename '$PWD')_debug && make Debug CC=clang CXX=clang++ -j$(nproc) )"
             ],
             "group": {
                 "kind": "build",
@@ -33,7 +33,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "time ( rm -f ./bin/$(basename '$PWD') && make Release -j$(nproc) )"
+                "time ( rm -f ./bin/$(basename '$PWD') && make Release CC=clang CXX=clang++ -j$(nproc) )"
             ],
         },
         {
